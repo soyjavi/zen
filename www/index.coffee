@@ -2,18 +2,41 @@
 
 module.exports = (zen) ->
 
-  zen.get "/www/:domain", (request, response, next) ->
-    data =
+  # Basic request with mustache page (with partials)
+  zen.get "/www/:subdomain", (request, response, next) ->
+    bindings =
       title : "zenserver"
-      author:
-        name    : request.parameters.domain
-        twitter : "@soyjavi"
-    response.page "index", data, ["partial"]
+      example:
+        subdomain: request.parameters.subdomain
+      session: request.session
+    response.page "index", bindings, ["partial.example", "partial.session"]
 
-  zen.get "/www", (request, response, next) ->
-    data =
-      title : "zenserver"
-      author:
-        name    : "Javi Jiménez"
-        twitter : "@soyjavi"
-    response.page "index", data, ["partial"]
+
+  # Basic Redirect
+  zen.get "/user/:id", (request, response) ->
+    response.redirect "/www/#{request.parameters.id}"
+
+
+  # Authentication via cookie and redirect
+  zen.get "/session/:context", (request, response, next) ->
+    if request.parameters.context is "login"
+      response.session (new Date()).toString()
+    else
+      response.logout()
+    response.redirect "/www/#{request.parameters.context}"
+
+
+  # form-data and HTML response
+  zen.get "/form", (request, response, next) ->
+    response.html """
+      <form action="/form" method="post" enctype="multipart/form-data">
+        <input type="text" name="field1">
+        <input type="text" name="field2">
+        <input type="file" name="media">
+        <input type="submit" value="Submit">
+      </form>
+    """
+
+  zen.post "/form", (request, response, next) ->
+    if request.required ["media"]
+      response.file request.parameters.media.path

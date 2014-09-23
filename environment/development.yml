@@ -1,10 +1,30 @@
-# -- RESTful services ----------------------------------------------------------
+# -- General Info --------------------------------------------------------------
 type    : development
 host    : localhost
 port    : 1337
 timezone: Europe/Madrid
 
-# -- General Info --------------------------------------------------------------
-log:
-  request: true
-  response: true
+# -- Services ------------------------------------------------------------------
+mongo:
+  - name    : primary
+    host    : ds063859.mongolab.com
+    port    : 63859
+    db      : nomadcode
+    user    : nomadco.de
+    password: n422YwOolf5xp2)5G/$$_
+
+  - name    : secondary
+    host    : ds063859.mongolab.com
+    port    : 63859
+    db      : nomadcode
+    user    : nomadco.de
+    password: n422YwOolf5xp2)5G/$$_
+
+redis:
+  host      : pub-redis-14048.eu-west-1-1.1.ec2.garantiadata.com
+  port      : 14048
+  password  : tapquo-redis
+
+appnima:
+  key: YOUR_APPNIMA_KEY
+  host: http://api.appnima.com/
