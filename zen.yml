@@ -9,7 +9,6 @@ environment: development
 # -- RESTful services ----------------------------------------------------------
 api:
   - index
-  # - error
 
 # -- HTML pages ----------------------------------------------------------------
 www:
@@ -17,14 +16,19 @@ www:
 
 # -- Static resources ----------------------------------------------------------
 statics:
-  - url     : /assets/:folder
+  - url     : /assets/:subfolder
     folder  : /static
     maxage  : 60 #secods
   - url     : /img
     folder  : /static/img
     maxage  : 60 #secods
+  - file    : humans.txt
+    folder  : /static
+    maxage  : 3600
+  - file    : robots.txt
+    folder  : /static
 
-# # -- session ----------------------------------------------------------------
+# -- session -------------------------------------------------------------------
 session:
   # Cookie Request
   cookie: zencookie
