@@ -39,5 +39,7 @@ module.exports = (zen) ->
     """
 
   zen.post "/form", (request, response, next) ->
-    if request.required ["media"]
+    if request.parameters.media
       response.file request.parameters.media.path
+    else
+      response.json request.parameters
