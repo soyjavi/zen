@@ -9,6 +9,7 @@ module.exports = (zen) ->
       example:
         subdomain: request.parameters.subdomain
       session: request.session
+      mobile : request.mobile
     response.page "index", bindings, ["partial.example", "partial.session"]
 
 
