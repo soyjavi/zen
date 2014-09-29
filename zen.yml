@@ -16,12 +16,11 @@ www:
 
 # -- Static resources ----------------------------------------------------------
 statics:
-  - url     : /assets/:subfolder
+  - url     : /temp/resources
     folder  : /static
     maxage  : 60 #secods
   - url     : /img
     folder  : /static/img
-    maxage  : 60 #secods
   - file    : humans.txt
     folder  : /static
     maxage  : 3600
