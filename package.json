@@ -6,10 +6,12 @@
   "author"          : "Javi Jimenez <javi@tapquo.com>",
   "dependencies": {
     "coffee-script" : "*",
-    "zenserver"    : "*" },
+    "zenserver"     : "*",
+    "zenproxy"      : "*" },
   "devDependencies": {
     "request" : "*",
-    "zenrequest": "*"
+    "zenrequest": "*",
+    "hyperquest": "*"
   },
   "scripts"         : {
     "start": "node zen.js zen development" ,

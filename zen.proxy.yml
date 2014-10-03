@@ -1,0 +1,82 @@
+# -- General Info --------------------------------------------------------------
+protocol: http #or https
+host    : localhost
+port    : 8888
+timezone: Europe/Amsterdam
+timeout : 60
+
+rules:
+  - name    : secure.com
+    https   : true
+    strategy: random
+    domain  : localhost
+    query   : /private
+    hosts   :
+      - address : localhost
+        port    : 1981
+
+  - name    : sub.domain.com
+    strategy: random
+    domain  : localhost
+    query   : /random
+    hosts:
+      - address : localhost
+        port    : 1981
+      - address : localhost
+        port    : 1982
+      - address : localhost
+        port    : 1983
+      - address : localhost
+        port    : 1984
+      - address : localhost
+        port    : 1985
+    statics:
+      - url     : /css
+        folder  : ~/assets/stylesheets
+        maxage  : 60 #1 minute
+      - url     : /img
+        folder  : /avatars
+        maxage  : 3600 #1 hour
+      - url     : /js
+        folder  : ~/assets/javascripts
+
+  - name    : domain.com
+    strategy: roundrobin
+    domain  : 127.0.0.1
+    query   : /roundrobin
+    hosts:
+      - address : localhost
+        port    : 1986
+      - address : 127.0.0.1
+        port    : 1987
+      - address : localhost
+        port    : 1988
+      - address : 127.0.0.1
+        port    : 1989
+      - address : localhost
+        port    : 1990
+
+  - name    : dominio.es
+    strategy: roundrobin
+    domain  : localhost
+    query   : /regex/prefix-.*/hello-.*
+    hosts:
+      - address : localhost
+        port    : 1987
+
+  - name    : redirect
+    strategy: roundrobin
+    domain  : localhost
+    query   : /redirect
+    hosts:
+      - address : localhost
+        port    : 2001
+
+  - name      : subdomains
+    strategy  : roundrobin
+    domain    : my-domain.com
+    subdomain : "test"
+    query     : /
+    hosts:
+      - address : localhost
+        port    : 1337
