@@ -1,4 +1,4 @@
-zen-server-example
-==================
+zen
+===
 
-Example of using ZEN-server
+Example of using ZEN packages (server, request & proxy)
