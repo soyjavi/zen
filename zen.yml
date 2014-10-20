@@ -38,6 +38,9 @@ session:
   authorization: zenauth
 
 
+audit:
+  interval: 1000
+
 # -- CORS Properties -----------------------------------------------------------
 headers:
   Access-Control-Allow-Origin: "*"
