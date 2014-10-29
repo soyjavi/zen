@@ -37,8 +37,8 @@ session:
   # HTTP Header
   authorization: zenauth
 
-
 audit:
+  password: my_P4ssw0rd
   interval: 1000
 
 # -- CORS Properties -----------------------------------------------------------
