@@ -37,15 +37,17 @@ session:
   # HTTP Header
   authorization: zenauth
 
-audit:
+monitor:
   password: my_P4ssw0rd
-  interval: 1000
+  process : 10000
+  request : 1000
 
 # -- CORS Properties -----------------------------------------------------------
 headers:
-  Access-Control-Allow-Origin: "*"
+  # Access-Control-Allow-Origin: "*"
+  Access-Control-Allow-Origin: "http://localhost:8000"
   Access-Control-Allow-Credentials: true
-  Access-Control-Allow-Methods: GET,PUT,POST,DELETE
+  Access-Control-Allow-Methods: GET,PUT,POST,DELETE,OPTIONS
   Access-Control-Max-Age: 1
   Access-Control-Allow-Headers:
     - Accept
