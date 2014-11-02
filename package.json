@@ -1,12 +1,12 @@
 {
-  "name"            : "yoi-instance",
-  "version"         : "1.09.13",
+  "name"            : "zen-instance",
+  "version"         : "0.11.02",
   "description"     : "a lean and mean http router for node.js",
   "homepage"        : "http://",
   "author"          : "Javi Jimenez <javi@tapquo.com>",
   "dependencies": {
     "coffee-script" : "*",
-    "zenserver"     : "*",
+    "zenserver"     : "0.11.02",
     "zenproxy"      : "*" },
   "devDependencies": {
     "request" : "*",
