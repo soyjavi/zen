@@ -3,7 +3,7 @@ protocol: http #or https
 host    : localhost
 port    : 8888
 timezone: Europe/Amsterdam
-timeout : 60
+timeout : 2000
 
 rules:
   - name    : secure.com
