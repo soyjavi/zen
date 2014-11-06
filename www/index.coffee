@@ -44,3 +44,7 @@ module.exports = (zen) ->
       response.file request.parameters.media.path
     else
       response.json request.parameters
+
+  # main request
+  zen.get "/", (request, response, next) ->
+    response.html """<h1>Hello World</h1>"""

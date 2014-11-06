@@ -1,12 +1,12 @@
 {
   "name"            : "zen-instance",
-  "version"         : "0.11.02",
+  "version"         : "0.11.06",
   "description"     : "a lean and mean http router for node.js",
   "homepage"        : "http://",
   "author"          : "Javi Jimenez <javi@tapquo.com>",
   "dependencies": {
     "coffee-script" : "*",
-    "zenserver"     : "0.11.02",
+    "zenserver"     : "0.11.06",
     "zenproxy"      : "*" },
   "devDependencies": {
     "request" : "*",

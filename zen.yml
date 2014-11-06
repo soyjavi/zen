@@ -37,10 +37,18 @@ session:
   # HTTP Header
   authorization: zenauth
 
+# -- Monitor -------------------------------------------------------------------
 monitor:
   password: my_P4ssw0rd
   process : 10000
   request : 1000
+
+# -- Firewall ------------------------------------------------------------------
+firewall:
+  extensions:
+    - php
+    - html
+    - cgi
 
 # -- CORS Properties -----------------------------------------------------------
 headers:
