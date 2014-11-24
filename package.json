@@ -6,7 +6,7 @@
   "author"          : "Javi Jimenez <javi@tapquo.com>",
   "dependencies": {
     "coffee-script" : "*",
-    "zenserver"     : "0.11.06",
+    "zenserver"     : "*",
     "zenproxy"      : "*" },
   "devDependencies": {
     "request" : "*",

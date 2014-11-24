@@ -45,6 +45,7 @@ monitor:
 
 # -- Firewall ------------------------------------------------------------------
 firewall:
+  ip: 10
   extensions:
     - php
     - html
