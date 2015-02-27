@@ -6,7 +6,4 @@ Estas a punto de entender otra forma de crear servicios para todos tus  proyecto
 * [ZEN-proxy](https://github.com/soyjavi/zen-proxy): Reverse Proxy & Balancer
 * [ZEN-request](https://github.com/soyjavi/zen-request): Service Testing & Crawler
 
-La principal diferencia con el resto de soluciones es que todos estos módulos han intentado incluir el menor número de dependencias. Esto es así para poder tener el mayor control sobre
-
-
-
+La principal diferencia con el resto de soluciones es que todos estos módulos han intentado incluir el menor número de dependencias.

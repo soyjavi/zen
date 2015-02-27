@@ -9,12 +9,12 @@
     "zenserver"     : "*",
     "zenproxy"      : "*" },
   "devDependencies": {
-    "request" : "*",
+    "request"   : "*",
     "zenrequest": "*",
     "hyperquest": "*"
   },
   "scripts"         : {
     "start": "node zen.js zen development" ,
-    "test": "node test.js" },
+    "test" : "node test.js" },
   "engines"         : { "node": "*"}
 }
