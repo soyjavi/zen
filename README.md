@@ -7,7 +7,7 @@ Este es un ejemplo de cómo utilizar los diferentes módulos de ZEN:
   - [ZEN-proxy](https://github.com/soyjavi/zen-proxy): Tareas de reverse-proxy y balanceo de carga
   - [ZEN-request](https://github.com/soyjavi/zen-request): Requests tanto para endpoints de ZENserver otros servicios en internet
 
-Además, gracias a ZEN-monitor, puedes visualizar la auditoría que ofrece ZEN-server. [Aquí](https://github.com/soyjavi/zen-monitor/tree/master/documentation/ES) puedes ver su documentación.
+Además, gracias a [ZEN-monitor](https://github.com/soyjavi/zen-monitor/tree/master/documentation/ES), puedes visualizar la auditoría que ofrece ZEN-server.
 
 ## 1. Inicio
 
@@ -34,7 +34,7 @@ Con este ejemplo vamos a utilizar varios de los servicios disponibles de los mó
 
 Esta arquitectura es la que encontrarás cuando clones el proyecto ZEN. A lo largo de este manual iremos explicando la función de cada elemento.
 
-### 1.1 Instalación
+### 1.1 Arranque
 
 Para empezar, clónate el proyecto e instala sus dependencias:
 
@@ -52,3 +52,5 @@ $node zen zen
 Recordemos que el primer parámetros después del comando `node` hace referencia al fichero que arranca el servidor, el segundo corresponde al fichero de configuración, el **yaml** que contiene todas la información necesaria con la que trabajará ZEN-server.
 
 Écha un vistazo al contenido de *zen.yml* y recuerda que en la documentación de [ZEN-server](https://github.com/soyjavi/zen-server/tree/master/documentation/ES) encontrarás la descripción de cada bloque de opciones.
+
+### 1.1 Arranque
